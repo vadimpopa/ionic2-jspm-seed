@@ -1,0 +1,6 @@
+.idea
+node_modules
+jspm_packages
+dist
+cordova/wwww
+cordova/platforms
