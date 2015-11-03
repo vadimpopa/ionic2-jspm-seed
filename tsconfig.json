@@ -1,6 +1,16 @@
 {
 	"compilerOptions": {
 		"target": "ES6",
-		"module": "system"
-	}
+		"module": "system",
+		"emitDecoratorMetadata": true,
+    	"experimentalDecorators": true
+	},
+	"files": [
+		"angular2/bundles/typings/angular2/angular2.d.ts",
+		"./app/local-types.d.ts",
+		"./app/app.ts",
+		"./app/list/list.ts",
+		"./app/item-details/item-details.ts",
+		"./app/hello-ionic/hello-ionic.ts"
+	]
 }
