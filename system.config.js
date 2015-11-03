@@ -29,15 +29,12 @@ System.config({
         }
       },
       "map": {
-        "ionic/ionic": "ionic/dist/src/es5/common/ionic/ionic"
+        "ionic": "ionic/dist/src/es5/common/ionic"
       }
     },
     "npm:ionic-framework@2.0.0-alpha.31": {
       "map": {
-        "ionic/util": "./dist/src/es5/common/ionic/util",
-        "ionic/gestures": "./dist/src/es5/common/ionic/gestures",
-        "ionic/animations": "./dist/src/es5/common/ionic/animations",
-        "ionic/components": "./dist/src/es5/common/ionic/components"
+        "ionic": "./dist/src/es5/common/ionic"
       },
       "meta": {
         "*.ts": {
