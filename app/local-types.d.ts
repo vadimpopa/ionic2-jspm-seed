@@ -1,7 +1,6 @@
-// This uses jspm resolution to locate the file because resolveAmbientRefs is set to true
-declare var __moduleName;
 
-declare module "ionic" {
+// this could come from tsd / definitely-typed
+declare module "ionic/ionic" {
 	var a: any;
 	export = a;
 }
