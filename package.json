@@ -62,11 +62,6 @@
     "devDependencies": {
       "clean-css": "npm:clean-css@^3.4.6",
       "typescript": "npm:typescript@^1.6.2"
-    },
-    "overrides": {
-      "npm:ionic-framework@2.0.0-alpha.31": {
-        "main": "dist/src/es5/common/ionic/ionic"
-      }
     }
   }
 }
