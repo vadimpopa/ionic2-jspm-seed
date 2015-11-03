@@ -1,15 +1,6 @@
 {
 	"compilerOptions": {
-		"target": "es5",
-		"module": "amd",
-		"allowNonTsExtensions": true,
-	   "isolatedModules": true,
-	   "emitDecoratorMetadata": true,
-	   "experimentalDecorators": true,
-	   "noEmitOnError": false
-
-	},
-	"files": [
-		"./src/js/app.js"
-	]
+		"target": "ES6",
+		"module": "system"
+	}
 }

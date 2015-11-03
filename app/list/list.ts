@@ -1,4 +1,4 @@
-import {IonicApp, Page, NavController, NavParams} from 'ionic2/js/ionic';
+import {IonicApp, Page, NavController, NavParams} from 'ionic/ionic';
 
 // import {ItemDetailsPage} from '../item-details/item-details';
 

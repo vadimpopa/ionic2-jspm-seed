@@ -4,23 +4,36 @@ System.config({
   transpiler: "typescript",
   typescriptOptions: {
     "noImplicitAny": false,
-    "typeCheck": true,
-    "tsconfig": true,
-    "resolveAmbientRefs": true
+    "tsconfig": true
   },
   paths: {
     "npm:*": "jspm_packages/npm/*",
     "github:*": "jspm_packages/github/*",
     "app": "app"
   },
-  separateCSS: true,
 
+  separateCSS: true,
+  
   packages: {
     "app": {
       "main": "app",
-      "defaultExtension": "js",
+      "defaultExtension": "ts",
       "meta": {
-        "*.js": {
+        "*.ts": {
+          "loader": "ts"
+        },
+        "*.css": {
+          "loader": "css"
+        },
+        "*.html": {
+          "loader": "text"
+        }
+      }
+    },
+    "npm:ionic-framework@2.0.0-alpha.30": {
+      "defaultExtension": "ts",
+      "meta": {
+        "*.ts": {
           "loader": "ts"
         },
         "*.css": {
@@ -36,7 +49,7 @@ System.config({
   map: {
     "clean-css": "npm:clean-css@3.4.6",
     "css": "github:systemjs/plugin-css@0.1.19",
-    "ionic2": "npm:ionic-framework@2.0.0-alpha.30",
+    "ionic": "npm:ionic-framework@2.0.0-alpha.30/src/typescript",
     "reflect-metadata": "npm:reflect-metadata@0.1.1",
     "ts": "github:frankwallis/plugin-typescript@2.1.4",
     "typescript": "npm:typescript@1.6.2",
@@ -268,7 +281,7 @@ System.config({
     "npm:es6-promise@3.0.2": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:es6-shim@0.33.9": {
+    "npm:es6-shim@0.33.10": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:evp_bytestokey@1.0.0": {
@@ -293,7 +306,7 @@ System.config({
       "angular2": "npm:angular2@2.0.0-alpha.44",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
-      "es6-shim": "npm:es6-shim@0.33.9",
+      "es6-shim": "npm:es6-shim@0.33.10",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "reflect-metadata": "npm:reflect-metadata@0.1.1",
