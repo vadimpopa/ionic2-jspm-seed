@@ -29,12 +29,13 @@ System.config({
         }
       },
       "map": {
-        "ionic": "ionic/dist/src/es5/common/ionic"
+        "ionic": "ionic/dist/src/typescript"
       }
     },
     "npm:ionic-framework@2.0.0-alpha.31": {
+      "defaultExtension": "ts",
       "map": {
-        "ionic": "./dist/src/es5/common/ionic"
+        "ionic": "./dist/src/typescript"
       },
       "meta": {
         "*.ts": {
