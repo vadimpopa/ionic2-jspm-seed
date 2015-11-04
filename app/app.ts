@@ -1,6 +1,3 @@
-
-/// <reference path="./_references.d.js" />
-
 import "./app.css!";
 
 import 'reflect-metadata'
@@ -8,7 +5,6 @@ import {App, IonicApp, Platform} from 'ionic/ionic';
 
 import {HelloIonicPage} from './hello-ionic/hello-ionic';
 import {ListPage} from './list/list';
-
 
 @App({
   templateUrl: 'app/app.html'
