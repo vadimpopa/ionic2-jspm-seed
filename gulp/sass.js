@@ -6,16 +6,20 @@ var concat = require('gulp-concat');
 var connect = require('gulp-connect');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var sassResolver = require('./sassresolver.js');
 
 var sassOptions = {
   errLogToConsole: true,
-  outputStyle: 'expanded'
+  outputStyle: 'expanded',
+  includePaths: []
 };
 
 // Compile SASS with sourcemaps + livereload.
 gulp.task('sass', function() {
   gulp.src(global.paths.sass)
     .pipe(sourcemaps.init())
+    .pipe(sassResolver({systemConfig: global.paths.systemConfig}))
+    //.pipe(sass({includePaths: includePaths}))
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(concat('app.css'))
     .pipe(autoprefixer())

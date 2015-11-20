@@ -18,7 +18,7 @@ var minifyCss = require('gulp-minify-css');
 gulp.task('build', function (done) {
   console.log('run seq');
   gulp.start('clean');
-  runSeq('buildsass', ['buildimg', 'buildjs'], 'buildhtml', done);
+  runSeq('buildsass', ['buildimg', 'buildjs', 'fonts'], 'buildhtml', done);
 });
 
 gulp.task('bundle-debug', function (cb) {

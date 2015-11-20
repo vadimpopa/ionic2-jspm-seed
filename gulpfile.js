@@ -41,11 +41,15 @@ global.paths = {
   'cordova': './cordova',
 
   'node_modules': './node_modules',
+
+  'systemConfig': './system.config.js',
+
+  'fonts' : './fonts'
 };
 
 global.app = {
-  name: 'NavTeacher',
-  bundleId: 'com.srgsolutions.navteacher'
+  name: 'Starter',
+  bundleId: 'com.mycompany.starter'
 }
 
 // Require all tasks in the 'gulp' folder.

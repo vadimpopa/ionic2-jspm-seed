@@ -19,14 +19,8 @@ $colors: (
 
 );
 
-
-
-// Ionic Sass
-// ---------------------------------
-@import "../node_modules/ionic-framework/src/scss/ionic";
-
-
+@import "~ionic/dist/src/scss/ionic.scss";
 
 // Import your Sass files here
 // ---------------------------------
-@import "item-details/item-details";
+@import "item-details/item-details.scss";

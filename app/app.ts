@@ -1,6 +1,7 @@
 import "./app.css!";
 
 import 'reflect-metadata'
+import 'zone.js';
 import {App, IonicApp, Platform} from 'ionic/ionic';
 
 import {HelloIonicPage} from './hello-ionic/hello-ionic';
