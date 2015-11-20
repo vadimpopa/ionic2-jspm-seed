@@ -40,12 +40,12 @@ global.paths = {
   // Cordova folder
   'cordova': './cordova',
 
-  'node_modules': './node_modules',
+  'node_modules': './node_modules'
 };
 
 global.app = {
-  name: 'NavTeacher',
-  bundleId: 'com.srgsolutions.navteacher'
+  name: 'Starter',
+  bundleId: 'com.mycompany.starter'
 }
 
 // Require all tasks in the 'gulp' folder.
