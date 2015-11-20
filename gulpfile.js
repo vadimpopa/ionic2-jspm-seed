@@ -40,7 +40,11 @@ global.paths = {
   // Cordova folder
   'cordova': './cordova',
 
-  'node_modules': './node_modules'
+  'node_modules': './node_modules',
+
+  'systemConfig': './system.config.js',
+
+  'fonts' : './fonts'
 };
 
 global.app = {

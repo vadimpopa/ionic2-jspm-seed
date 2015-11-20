@@ -46,8 +46,8 @@
     "imagemin-pngquant": "^4.2.0",
     "jspm": "^0.16.15",
     "require-dir": "^0.3.0",
-    "run-sequence": "^1.1.4",
     "rsvp": "^3.0.18",
+    "run-sequence": "^1.1.4",
     "systemjs": "^0.18.1",
     "through2": "^2.0.0"
   },

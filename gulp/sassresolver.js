@@ -48,11 +48,9 @@ module.exports = function(options) {
 
 			return Promise.resolve(System.normalize(val))
 					.then(function(normalized) {
-						console.log(normalized)
 						return System.locate({name: normalized, metadata: {}});
 					})
 					.then(function(address) {
-						console.log(address);
 						if (isPath) {
 							options.includePaths.push(
 									path.resolve(address.replace('file:', '').replace('.js', ''))
@@ -64,8 +62,6 @@ module.exports = function(options) {
 							);
 							
 							replacements[i] = '..' + path.resolve(address.replace('file:', '').replace('.js', ''))
-
-							console.log(replacements[i]);
 						}
 					});
 		}
