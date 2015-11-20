@@ -3,8 +3,8 @@ JSPM + Ionic2 + Typescript starter
 
 
 WORK IN PROGRESS:
-- current status: app in typescript mode is loading fine in browser
-- current issue: working at sass gulp task, on resolving sass imports paths from the jspm packages. Someting related in plugins (which have some issues also): https://github.com/idcware/node-sass-jspm-importer , https://github.com/clempat/gulp-systemjs-resolver.
+- current status: app in typescript mode is loading fine in browser. Ready for Development.
+- to do: improve the gulp dev tasks, and finish cordova build tasks.
 
 Contribution is welcomed.
 
