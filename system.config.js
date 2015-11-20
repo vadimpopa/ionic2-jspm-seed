@@ -32,7 +32,7 @@ System.config({
         "ionic": "ionic/dist/src/typescript"
       }
     },
-    "npm:ionic-framework@2.0.0-alpha.31": {
+    "npm:ionic-framework@2.0.0-alpha.32": {
       "defaultExtension": "ts",
       "map": {
         "ionic": "./dist/src/typescript"
@@ -54,10 +54,11 @@ System.config({
   map: {
     "clean-css": "npm:clean-css@3.4.6",
     "css": "github:systemjs/plugin-css@0.1.19",
-    "ionic": "npm:ionic-framework@2.0.0-alpha.31",
+    "ionic": "npm:ionic-framework@2.0.0-alpha.32",
     "reflect-metadata": "npm:reflect-metadata@0.1.2",
     "ts": "github:frankwallis/plugin-typescript@2.1.6",
     "typescript": "npm:typescript@1.6.2",
+    "zone.js": "npm:zone.js@0.5.8",
     "github:frankwallis/plugin-typescript@2.1.6": {
       "typescript": "npm:typescript@1.6.2"
     },
@@ -357,7 +358,7 @@ System.config({
       "through": "npm:through@2.3.8",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:ionic-framework@2.0.0-alpha.31": {
+    "npm:ionic-framework@2.0.0-alpha.32": {
       "@reactivex/rxjs": "npm:@reactivex/rxjs@5.0.0-alpha.4",
       "angular2": "npm:angular2@2.0.0-alpha.44",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
