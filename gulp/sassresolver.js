@@ -20,7 +20,9 @@ module.exports = function(options) {
 		options.includePaths = [];
 	}
 
-	eval(fs.readFileSync(options.systemConfig, 'utf8'));
+	if (Object.keys(System.map).length === 0) {
+		eval(fs.readFileSync(options.systemConfig, 'utf8'));
+	}
 
 	return through.obj(function(file, enc, cb) {
 		var replacements = [],

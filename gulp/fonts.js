@@ -6,7 +6,9 @@ var path    = require('path');
 var fs      = require('fs');
 
 gulp.task('fonts', function () {
-	eval(fs.readFileSync(global.paths.systemConfig, 'utf8'));
+	if (Object.keys(System.map).length === 0) {
+		eval(fs.readFileSync(global.paths.systemConfig, 'utf8'));
+	}
 
  	var ionicUrl = System.normalizeSync('ionic');
   	var ionicDir = path.resolve(ionicUrl.replace('file:', '').replace('.js', ''));

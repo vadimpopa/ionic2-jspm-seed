@@ -33,6 +33,8 @@
     "gulp-eslint": "^1.1.0",
     "gulp-exec": "^2.1.2",
     "gulp-imagemin": "^2.4.0",
+    "gulp-inline-ng2-template": "0.0.7",
+    "gulp-jspm": "^0.5.5",
     "gulp-minify-css": "^1.2.1",
     "gulp-minify-html": "^1.0.4",
     "gulp-rename": "^1.2.2",
@@ -58,7 +60,7 @@
     "configFile": "system.config.js",
     "dependencies": {
       "css": "github:systemjs/plugin-css@^0.1.19",
-      "ionic": "npm:ionic-framework@2.0.0-alpha.32",
+      "ionic": "npm:ionic-framework@2.0.0-alpha.34",
       "reflect-metadata": "npm:reflect-metadata@^0.1.2",
       "ts": "github:frankwallis/plugin-typescript@^2.1.6",
       "zone.js": "npm:zone.js@^0.5.8"

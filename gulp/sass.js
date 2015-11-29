@@ -11,7 +11,6 @@ var sassResolver = require('./sassresolver.js');
 var sassOptions = {
   errLogToConsole: true,
   outputStyle: 'expanded',
-  includePaths: []
 };
 
 // Compile SASS with sourcemaps + livereload.
@@ -19,7 +18,6 @@ gulp.task('sass', function() {
   gulp.src(global.paths.sass)
     .pipe(sourcemaps.init())
     .pipe(sassResolver({systemConfig: global.paths.systemConfig}))
-    //.pipe(sass({includePaths: includePaths}))
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(concat('app.css'))
     .pipe(autoprefixer())

@@ -18,9 +18,11 @@ var requireDir = require('require-dir');
 global.paths = {
   // HTML sources.
   'html': 'index.prod.html',
+
+  'tpl': './app/**/*.html',
   
   // JS sources.
-  'js': './app/**/*.js',
+  'js': './app/**/*.ts',
   
   // SASS sources.
   'sass': './app/**/*.scss',
