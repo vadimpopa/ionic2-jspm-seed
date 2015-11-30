@@ -2,15 +2,20 @@
 
 var gulp = require('gulp');
 var cache = require('gulp-cached');
-var eslint = require('gulp-eslint');
+var tslint = require('gulp-tslint');
+var tslintStylish = require('gulp-tslint-stylish');
 var scsslint = require('gulp-scss-lint');
 
 // Lint JS.
 gulp.task('lintjs', function () {
   return gulp.src(global.paths.js)
-    .pipe(cache('lintjs'))
-    .pipe(eslint())
-    .pipe(eslint.format());
+  .pipe(cache('lintjs'))
+  .pipe(tslint())
+  .pipe(tslint.report(tslintStylish, {
+	    emitError: false,
+	    sort: true,
+	    bell: true
+	  }));
 });
 
 // Lint SASS.

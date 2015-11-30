@@ -19,8 +19,10 @@ $colors: (
 
 );
 
-@import "~ionic/dist/src/scss/ionic.scss";
+// scss-lint:disable BorderZero
+@import '~ionic/dist/src/scss/ionic';
+// scss-lint:enable BorderZero
 
 // Import your Sass files here
 // ---------------------------------
-@import "item-details/item-details.scss";
+@import 'item-details/item-details';
