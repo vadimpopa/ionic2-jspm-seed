@@ -13,4 +13,6 @@ Commands to start the app
 2. jspm install
 3. gulp
 
+To build the distro run: gulp build_dist
+
 Using node v4.2.2 (npm v2.14.7)
