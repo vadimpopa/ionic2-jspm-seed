@@ -5,7 +5,7 @@ var System  = require('systemjs');
 var path    = require('path');
 var fs      = require('fs');
 
-gulp.task('fonts', function () {
+function getIonicFontsPaths() {
 	if (Object.keys(System.map).length === 0) {
 		eval(fs.readFileSync(global.paths.systemConfig, 'utf8'));
 	}
@@ -15,9 +15,17 @@ gulp.task('fonts', function () {
 
   	ionicDir = "." + ionicDir + "/dist/"
 
- return gulp.src([
+  	return [
 	    ionicDir + 'fonts/**/*.ttf',
 	    ionicDir + 'fonts/**/*.woff'
-	])
-    .pipe(gulp.dest(global.paths.fonts));
+	];
+}
+
+gulp.task('fonts_dev', function () {
+ return gulp.src(getIonicFontsPaths()).pipe(gulp.dest(global.paths.fontsDev));
 });
+
+gulp.task('fonts_dist', function () {
+ return gulp.src(getIonicFontsPaths()).pipe(gulp.dest(global.paths.fontsDist));
+});
+

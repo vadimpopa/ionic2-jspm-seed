@@ -17,10 +17,10 @@ var inlineNg2Template = require('gulp-inline-ng2-template');
 var gulp_jspm = require('gulp-jspm');
 
 // One build task to rule them all.
-gulp.task('build', function (done) {
+gulp.task('build_dist', function (done) {
   console.log('run seq');
   gulp.start('clean');
-  runSeq('sass','copy_css_to_dist','buildjs', 'buildhtml', done);
+  runSeq('sass','buildjs_fast', 'buildhtml', 'copy_css_to_dist', 'fonts_dist', done);
 });
 
 gulp.task('bundle-debug', function (cb) {
@@ -43,15 +43,17 @@ gulp.task('bundle-debug', function (cb) {
 
 gulp.task('buildjs', function (cb) {
   var Builder = require('systemjs-builder');
-  var builder = new Builder("./","system.config.js");
+  var builder = new Builder(global.paths.src, global.paths.systemConfig);
     
   builder.reset();
 
-  builder.buildStatic("app", "dist/app.min.js", {minify: true})
+  builder.buildStatic("app", global.paths.jsDist, {minify: true})
     .then(function (output) {
-      gulp.src("dist/app.min.js")
-        .pipe(inlineNg2Template({ base: "./", css: false}))
-        .pipe(gulp.dest('dist/'))
+      gulp.src(global.paths.jsDist)
+        .pipe(inlineNg2Template({ base: global.paths.src, css: false}))
+        .pipe(gulp.dest(global.paths.dist));
+
+        cb();
   })
   .catch(function(err) {
     console.log(err);
@@ -60,33 +62,30 @@ gulp.task('buildjs', function (cb) {
 });
 
 //buildjs produces same as this one
-gulp.task('bjs', function(){
+gulp.task('buildjs_fast', function(){
     return gulp.src('app/app.ts')
         .pipe(gulp_jspm({
           selfExecutingBundle: true
         }))
-        .pipe(inlineNg2Template({ base: "./", target: 'es5', css: false }))
+        .pipe(inlineNg2Template({ base: global.paths.src, css: false }))
         .pipe(rename({
           basename: 'app.min',
           extname: '.js'
         }))
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest(global.paths.dist));
 });
 
 gulp.task('copy_css_to_dist', function () {
-  gulp.src(global.paths.css)
-    .pipe(concat('app.css'))
-    .pipe(minifyCss())
+  gulp.src(global.paths.css + global.paths.cssFile)
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(global.paths.dist))
+    .pipe(minifyCss())
+    .pipe(gulp.dest(global.paths.dist));
 });
 
 // Build HTML for distribution.
 gulp.task('buildhtml', function () {
-   console.log('buildhtml');
-
   gulp.src(global.paths.html)
     .pipe(rename({
           basename: 'index'

@@ -19,7 +19,7 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(sassResolver({systemConfig: global.paths.systemConfig}))
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(concat('app.css'))
+    .pipe(concat(global.paths.cssFile))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(global.paths.css))

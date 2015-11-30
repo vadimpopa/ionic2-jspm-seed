@@ -34,7 +34,9 @@ global.paths = {
   'src': './',
   
   // Compiled CSS folder.
-  'css': './app',
+  'css': './app/',
+
+  'cssFile': 'app.css',
   
   // Distribution folder.
   'dist': './dist',
@@ -46,7 +48,11 @@ global.paths = {
 
   'systemConfig': './system.config.js',
 
-  'fonts' : './fonts'
+  'fontsDev' : './fonts',
+
+  'fontsDist' : './dist/fonts',
+
+  'jsDist' : './dist/app.min.js'
 };
 
 global.app = {
