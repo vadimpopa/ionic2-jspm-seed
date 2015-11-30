@@ -11,8 +11,9 @@ Contribution is welcomed.
 Commands to start the app
 1. npm install
 2. jspm install
-3. gulp
 
+To watch from local: gulp
+To watch from distro: gulp connect-build
 To build the distro run: gulp build_dist
 
 Using node v4.2.2 (npm v2.14.7)

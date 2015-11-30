@@ -40,7 +40,6 @@ gulp.task('bundle-debug', function (cb) {
     });
 });
 
-
 gulp.task('buildjs', function (cb) {
   var Builder = require('systemjs-builder');
   var builder = new Builder(global.paths.src, global.paths.systemConfig);
