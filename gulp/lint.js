@@ -7,9 +7,9 @@ var tslintStylish = require('gulp-tslint-stylish');
 var scsslint = require('gulp-scss-lint');
 
 // Lint JS.
-gulp.task('lintjs', function () {
+gulp.task('lint.js', function () {
   return gulp.src(global.paths.js)
-  .pipe(cache('lintjs'))
+  .pipe(cache('lint.js'))
   .pipe(tslint())
   .pipe(tslint.report(tslintStylish, {
 	    emitError: false,
@@ -19,11 +19,11 @@ gulp.task('lintjs', function () {
 });
 
 // Lint SASS.
-gulp.task('lintsass', function () {
+gulp.task('lint.sass', function () {
   return gulp.src(global.paths.sass)
-    .pipe(cache('lintsass'))
+    .pipe(cache('lint.sass'))
     .pipe(scsslint());
 });
 
 // Lint all the things!
-gulp.task('lint', ['lintjs', 'lintsass']);
+gulp.task('lint', ['lint.js', 'lint.sass']);

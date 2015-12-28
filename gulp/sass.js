@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var connect = require('gulp-connect');
 var sass = require('gulp-sass');
@@ -10,7 +9,7 @@ var sassResolver = require('./sassresolver.js');
 
 var sassOptions = {
   errLogToConsole: true,
-  outputStyle: 'expanded',
+  outputStyle: 'expanded'
 };
 
 // Compile SASS with sourcemaps + livereload.
@@ -20,7 +19,6 @@ gulp.task('sass', function() {
     .pipe(sassResolver({systemConfig: global.paths.systemConfig}))
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(concat(global.paths.cssFile))
-    .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(global.paths.css))
     .pipe(connect.reload());

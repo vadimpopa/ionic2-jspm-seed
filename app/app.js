@@ -1,16 +1,13 @@
-import "./app.css!";
+import 'reflect-metadata';
 
-import 'reflect-metadata'
-import 'zone.js';
 import {App, IonicApp, Platform} from 'ionic/ionic';
 
-import {HelloIonicPage} from './hello-ionic/hello-ionic';
-import {ListPage} from './list/list';
+import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
+import {ListPage} from './pages/list/list';
 
 @App({
   templateUrl: 'app/app.html'
 })
-
 class MyApp {
   constructor(app: IonicApp, platform: Platform) {
 
@@ -53,7 +50,7 @@ class MyApp {
 
   openPage(page) {
     // close the menu when clicking a link from the menu
-    this.app.getComponent('menu').close();
+    this.app.getComponent('leftMenu').close();
     // navigate to the new page if it is not the current page
     let nav = this.app.getComponent('nav');
     nav.setRoot(page.component);

@@ -13,7 +13,7 @@ var regexPath = /@importPath\s*['"](~.*)['"]/mig;
 
 module.exports = function(options) {
 	if (!options || !options.systemConfig) {
-		//throw new gutil.PluginError('gulp-systemjs-resolver', '`systemConfig` required');
+		throw new gutil.PluginError('gulp-systemjs-resolver', '`systemConfig` required');
 	}
 
 	if (!options.includePaths) {
@@ -34,7 +34,7 @@ module.exports = function(options) {
 		}
 
 		if (file.isStream()) {
-			//cb(new gutil.PluginError('gulp-systemjs-resolver', 'Streaming not supported'));
+			cb(new gutil.PluginError('gulp-systemjs-resolver', 'Streaming not supported'));
 			return;
 		}
 
@@ -126,7 +126,7 @@ module.exports = function(options) {
 		resolveAll(file.contents.toString()).then(function(newFileContent) {
 			file.contents = new Buffer(newFileContent);
 		}).catch(function(err) {
-			//self.emit('error', new gutil.PluginError('gulp-systemjs-resolver', err));
+			self.emit('error', new gutil.PluginError('gulp-systemjs-resolver', err));
 		}).finally(function() {
 			self.push(file);
 			cb();

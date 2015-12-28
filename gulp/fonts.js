@@ -13,7 +13,7 @@ function getIonicFontsPaths() {
  	var ionicUrl = System.normalizeSync('ionic');
   	var ionicDir = path.resolve(ionicUrl.replace('file:', '').replace('.js', ''));
 
-  	ionicDir = "." + ionicDir + "/dist/"
+  	ionicDir = "." + ionicDir + "/dist/";
 
   	return [
 	    ionicDir + 'fonts/**/*.ttf',
@@ -21,11 +21,11 @@ function getIonicFontsPaths() {
 	];
 }
 
-gulp.task('fonts_dev', function () {
+gulp.task('copy.fonts.dev', function () {
  return gulp.src(getIonicFontsPaths()).pipe(gulp.dest(global.paths.fontsDev));
 });
 
-gulp.task('fonts_dist', function () {
+gulp.task('copy.fonts.dist', function () {
  return gulp.src(getIonicFontsPaths()).pipe(gulp.dest(global.paths.fontsDist));
 });
 

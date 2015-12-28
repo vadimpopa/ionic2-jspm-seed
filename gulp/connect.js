@@ -12,7 +12,7 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('connect-build', function() {
+gulp.task('connect.build', function() {
   connect.server({
     root: global.paths.dist,
     livereload: true
