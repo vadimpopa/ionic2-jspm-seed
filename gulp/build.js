@@ -15,7 +15,7 @@ var gulp_jspm = require('gulp-jspm');
 var minifyCss = require('gulp-minify-css');
 
 function buildJsFast(minify) {
-    return gulp.src('app/app.ts')
+    return gulp.src(global.paths.jsMain)
         .pipe(gulp_jspm({
             selfExecutingBundle: true,
             minify: minify
@@ -55,7 +55,7 @@ gulp.task('build.js.slow', function (cb) {
 });
 
 gulp.task('build.js', function () {
-    return gulp.src('app/app.ts')
+    return gulp.src(global.paths.jsMain)
         .pipe(gulp_jspm({
             selfExecutingBundle: true,
             minify: true

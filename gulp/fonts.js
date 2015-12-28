@@ -13,7 +13,7 @@ function getIonicFontsPaths() {
  	var ionicUrl = System.normalizeSync('ionic');
   	var ionicDir = path.resolve(ionicUrl.replace('file:', '').replace('.js', ''));
 
-  	ionicDir = "." + ionicDir + "/dist/";
+  	ionicDir = "." + ionicDir + "/";
 
   	return [
 	    ionicDir + 'fonts/**/*.ttf',
