@@ -1,19 +1,18 @@
-# jspm-ionic2-starter
-JSPM + Ionic2 + Typescript starter
+# ionic2-jspm-seed
+ionic2-jspm-seed + typescript starter
 
+Status:
+  - ```gulp build.dev``` ok 
+  - ```gulp build.dist``` ok 
 
-WORK IN PROGRESS:
-- current status: app in typescript mode is loading fine in browser. Ready for Development.
-- to do: improve the gulp dev tasks, and finish cordova build tasks.
+To Do:
+  - improve gulp tasks
+  - finish cordova build & simulate tasks.
 
-Contribution is welcomed.
-
-Commands to start the app
-1. npm install
-2. jspm install
+To install the platform:
+  - npm install
+  - jspm install
 
 To watch from local: gulp
-To watch from distro: gulp connect-build
-To build the distro run: gulp build_dist
-
-Using node v4.2.2 (npm v2.14.7)
+To watch from distro: gulp connect.build
+To build the distro first you should at least once ```gulp build.dev``` then ```gulp build.dist```
