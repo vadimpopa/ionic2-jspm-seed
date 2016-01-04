@@ -8,9 +8,9 @@
 	"files": [
 		"angular2/bundles/typings/angular2/angular2.d.ts",
 		"./app/local-types.d.ts",
-		"./app/app.ts",
-		"./app/list/list.ts",
-		"./app/item-details/item-details.ts",
-		"./app/hello-ionic/hello-ionic.ts"
+		"./app/app.js",
+		"./app/list/list.js",
+		"./app/item-details/item-details.js",
+		"./app/hello-ionic/hello-ionic.js"
 	]
 }

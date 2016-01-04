@@ -13,6 +13,46 @@
 
 var gulp = require('gulp');
 var requireDir = require('require-dir');
+var argv = require('yargs').argv;
+
+global.ENV = argv.env;
+
+global.dependencies = {
+    scripts: [
+      {
+        name: 'zone.js', src: 'dist/zone.min.js', dest: 'lib/zone.min.js', env: 'prod'
+      },
+      {
+        src: 'cordova.js', dest: 'lib/cordova.js', env: 'prod'
+      },
+      {
+        src: 'dist/app.min.js', dest: 'app.min.js', env: 'prod'
+      },
+      { 
+        src: 'jspm_packages/system.src.js', env: 'dev'
+      },
+      {
+        src: 'system.config.js', env: 'dev'
+      },
+      {
+        src: 'app/bootstrap.js', env: 'dev'
+      }],
+    fonts: [
+      {
+        name: 'ionic', src: 'fonts/**/*.ttf'
+      },{
+        name: 'ionic', src: 'fonts/**/*.woff'
+      }
+    ],
+    css: [
+      {
+        src: 'app/app.css', env: 'dev'
+      },
+      {
+        src: 'dist/app.min.css', dest: 'app.min.css', env: 'prod'
+      }
+    ]
+  };
 
 // Specify paths & globbing patterns for tasks.
 global.paths = {
@@ -26,7 +66,7 @@ global.paths = {
   'js': './app/**/*.js',
   
   // SASS sources.
-  'sass': './app/**/*.scss',
+  'sass': './app/app.ios.scss',
   
   // Image sources.
   'img': './app/img/*',
@@ -35,7 +75,7 @@ global.paths = {
   'src': './',
   
   // Compiled CSS folder.
-  'css': './app/',
+  'app': './app/',
 
   'cssFile': 'app.css',
   

@@ -17,7 +17,10 @@ System.config({
     "app": {
       "main": "app",
       "defaultExtension": "js",
-      "meta": {
+      "map": {
+        "ionic": "ionic"
+      },
+      "modules": {
         "*.js": {
           "loader": "ts"
         },
@@ -27,9 +30,6 @@ System.config({
         "*.html": {
           "loader": "text"
         }
-      },
-      "map": {
-        "ionic": "ionic"
       }
     },
     "npm:ionic-framework@2.0.0-alpha.44": {
@@ -37,7 +37,7 @@ System.config({
       "map": {
         "ionic": "./"
       },
-      "meta": {
+      "modules": {
         "*.ts": {
           "loader": "ts"
         },
@@ -51,7 +51,14 @@ System.config({
     }
   },
 
+  // depCache: {
+  //   "app/app.js": [
+  //     "reflect-metadata"
+  //   ]
+  // },
+
   map: {
+    "angular2": "npm:angular2@2.0.0-beta.0",
     "clean-css": "npm:clean-css@3.4.8",
     "css": "github:systemjs/plugin-css@0.1.20",
     "ionic": "npm:ionic-framework@2.0.0-alpha.44",

@@ -1,7 +1,7 @@
 import {IonicApp, Page, NavController, NavParams} from 'ionic/ionic';
 
 @Page({
-  templateUrl: 'app/pages/item-details/item-details.html'
+	templateUrl: './app/pages/item-details/item-details.html'
 })
 export class ItemDetailsPage {
   constructor(app: IonicApp, nav: NavController, navParams: NavParams) {

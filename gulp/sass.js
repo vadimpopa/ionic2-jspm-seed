@@ -20,6 +20,6 @@ gulp.task('sass', function() {
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(concat(global.paths.cssFile))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(global.paths.css))
+    .pipe(gulp.dest(global.paths.app))
     .pipe(connect.reload());
 });

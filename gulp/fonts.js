@@ -1,24 +1,10 @@
 'use strict';
 
 var gulp = require('gulp');
-var System  = require('systemjs');
-var path    = require('path');
-var fs      = require('fs');
+var utils = require('./utils');
 
 function getIonicFontsPaths() {
-	if (Object.keys(System.map).length === 0) {
-		eval(fs.readFileSync(global.paths.systemConfig, 'utf8'));
-	}
-
- 	var ionicUrl = System.normalizeSync('ionic');
-  	var ionicDir = path.resolve(ionicUrl.replace('file:', '').replace('.js', ''));
-
-  	ionicDir = "." + ionicDir + "/";
-
-  	return [
-	    ionicDir + 'fonts/**/*.ttf',
-	    ionicDir + 'fonts/**/*.woff'
-	];
+	return global.dependencies.fonts.map(utils.getJSPMPackagePath);
 }
 
 gulp.task('copy.fonts.dev', function () {
