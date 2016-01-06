@@ -19,90 +19,90 @@ global.ENV = argv.env;
 
 global.dependencies = {
     scripts: [
-      {
-        name: 'zone.js', src: 'dist/zone.min.js', dest: 'lib/zone.min.js', env: 'prod'
-      },
-      {
-        src: 'cordova.js', dest: 'lib/cordova.js', env: 'prod'
-      },
-      {
-        src: 'dist/app.min.js', dest: 'app.min.js', env: 'prod'
-      },
-      { 
-        src: 'jspm_packages/system.src.js', env: 'dev'
-      },
-      {
-        src: 'system.config.js', env: 'dev'
-      },
-      {
-        src: 'app/bootstrap.js', env: 'dev'
-      }],
+        {
+            name: 'zone.js', src: 'dist/zone.min.js', dest: 'lib/zone.min.js', env: 'prod'
+        },
+        {
+            src: 'cordova.js', dest: 'lib/cordova.js', env: 'prod'
+        },
+        {
+            src: 'dist/app.min.js', dest: 'app.min.js', env: 'prod'
+        },
+        {
+            src: 'jspm_packages/system.src.js', env: 'dev'
+        },
+        {
+            src: 'system.config.js', env: 'dev'
+        },
+        {
+            src: 'app/bootstrap.js', env: 'dev'
+        }],
     fonts: [
-      {
-        name: 'ionic', src: 'fonts/**/*.ttf'
-      },{
-        name: 'ionic', src: 'fonts/**/*.woff'
-      }
+        {
+            name: 'ionic', src: 'fonts/**/*.ttf'
+        }, {
+            name: 'ionic', src: 'fonts/**/*.woff'
+        }
     ],
     css: [
-      {
-        src: 'app/app.css', env: 'dev'
-      },
-      {
-        src: 'dist/app.min.css', dest: 'app.min.css', env: 'prod'
-      }
+        {
+            src: 'app/app.css', env: 'dev'
+        },
+        {
+            src: 'dist/app.min.css', dest: 'app.min.css', env: 'prod'
+        }
     ]
-  };
+};
 
 // Specify paths & globbing patterns for tasks.
 global.paths = {
-  'jsMain': './app/app.js',
+    'jsMain': './app/app.js',
 
-  'html': 'index.prod.html',
+    'html': 'index.prod.html',
 
-  'tpl': './app/**/*.html',
-  
-  // JS sources.
-  'js': './app/**/*.js',
-  
-  // SASS sources.
-  'sass': './app/app.ios.scss',
-  
-  // Image sources.
-  'img': './app/img/*',
-  
-  // Sources folder.
-  'src': './',
-  
-  // Compiled CSS folder.
-  'app': './app/',
+    'tpl': './app/**/*.html',
 
-  'cssFile': 'app.css',
-  
-  // Distribution folder.
-  'dist': './dist',
+    // JS sources.
+    'js': './app/**/*.js',
 
-  // Cordova folder
-  'cordova': './cordova',
+    // SASS sources.
+    'sass': './app/app.ios.scss',
 
-  'node_modules': './node_modules',
+    // Image sources.
+    'img': './app/img/*',
 
-  'systemConfig': './system.config.js',
+    // Sources folder.
+    'src': './',
 
-  'fontsDev' : './fonts',
+    // Compiled CSS folder.
+    'app': './app/',
 
-  'fontsDist' : './dist/fonts',
+    'cssFile': 'app.css',
 
-  'jsDist' : './dist/app.min.js'
+    // Distribution folder.
+    'dist': './dist',
+
+    // Cordova folder
+    'cordova': './cordova',
+
+    'node_modules': './node_modules',
+
+    'systemConfig': './system.config.js',
+
+    'fontsDev': './fonts',
+
+    'fontsDist': './dist/fonts',
+
+    'jsDist': './dist/app.min.js'
 };
 
 global.app = {
-  name: 'Starter',
-  bundleId: 'com.mycompany.starter'
-}
+    name: 'Starter',
+    bundleId: 'com.mycompany.starter'
+};
 
 // Require all tasks in the 'gulp' folder.
-requireDir('./gulp', { recurse: false });
+requireDir('./gulp', {recurse: false});
 
 // Default task; start local server & watch for changes.
 gulp.task('default', ['connect', 'watch']);

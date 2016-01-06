@@ -11,7 +11,6 @@ var runSeq = require('run-sequence');
 var sass = require('gulp-sass');
 var inlineNg2Template = require('gulp-inline-ng2-template');
 var gulp_jspm = require('gulp-jspm');
-var jspm = require('gulp-jspm-build');
 var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var utils = require('./utils');
