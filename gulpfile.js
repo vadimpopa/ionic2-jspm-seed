@@ -1,16 +1,5 @@
 'use strict';
 
-/*
- * gulpfile.js
- * ===========
- * Rather than manage one giant configuration file responsible
- * for creating multiple tasks, each task has been broken out into
- * its own file in the 'gulp' folder. Any files in that directory get
- *  automatically required below.
- *
- * To add a new task, simply add a new task file in that directory.
- */
-
 var gulp = require('gulp');
 var requireDir = require('require-dir');
 var argv = require('yargs').argv;
@@ -57,42 +46,20 @@ global.dependencies = {
 // Specify paths & globbing patterns for tasks.
 global.paths = {
     'jsMain': './app/app.js',
-
     'html': 'index.prod.html',
-
     'tpl': './app/**/*.html',
-
-    // JS sources.
     'js': './app/**/*.js',
-
-    // SASS sources.
     'sass': './app/app.ios.scss',
-
-    // Image sources.
     'img': './app/img/*',
-
-    // Sources folder.
     'src': './',
-
-    // Compiled CSS folder.
     'app': './app/',
-
     'cssFile': 'app.css',
-
-    // Distribution folder.
     'dist': './dist',
-
-    // Cordova folder
     'cordova': './cordova',
-
     'node_modules': './node_modules',
-
     'systemConfig': './system.config.js',
-
     'fontsDev': './fonts',
-
     'fontsDist': './dist/fonts',
-
     'jsDist': './dist/app.min.js'
 };
 
