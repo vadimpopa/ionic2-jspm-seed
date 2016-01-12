@@ -4,6 +4,7 @@ System.config({
   transpiler: "typescript",
   typescriptOptions: {
     "noImplicitAny": false,
+    "typeCheck": false,
     "tsconfig": true
   },
   paths: {
@@ -34,6 +35,7 @@ System.config({
     },
     "npm:ionic-framework@2.0.0-alpha.44": {
       "defaultExtension": "js",
+      "main": "ionic",
       "map": {
         "ionic": "./"
       },
@@ -51,22 +53,22 @@ System.config({
     }
   },
 
-  // depCache: {
-  //   "app/app.js": [
-  //     "reflect-metadata"
-  //   ]
-  // },
+  depCache: {
+    "app/app.js": [
+      "reflect-metadata"
+    ]
+  },
 
   map: {
     "angular2": "npm:angular2@2.0.0-beta.0",
     "clean-css": "npm:clean-css@3.4.8",
     "css": "github:systemjs/plugin-css@0.1.20",
     "ionic": "npm:ionic-framework@2.0.0-alpha.44",
-    "reflect-metadata": "npm:reflect-metadata@0.1.2",
-    "ts": "github:frankwallis/plugin-typescript@2.4.4",
+    "reflect-metadata": "npm:reflect-metadata@0.1.3",
+    "ts": "github:frankwallis/plugin-typescript@2.4.6",
     "typescript": "npm:typescript@1.7.5",
     "zone.js": "npm:zone.js@0.5.10",
-    "github:frankwallis/plugin-typescript@2.4.4": {
+    "github:frankwallis/plugin-typescript@2.4.6": {
       "typescript": "npm:typescript@1.7.5"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -453,6 +455,10 @@ System.config({
       "readline": "github:jspm/nodelibs-readline@0.1.0"
     },
     "npm:reflect-metadata@0.1.2": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:reflect-metadata@0.1.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },

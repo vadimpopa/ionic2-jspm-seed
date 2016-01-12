@@ -1,7 +1,7 @@
 var gulp    = require('gulp');
 var inject = require('gulp-inject');
 var gulpIf = require('gulp-if');
-var minifyHtml = require('gulp-minify-html');
+var minifyHtml = require('gulp-htmlmin');
 var utils = require('./utils');
 
 gulp.task('build.index', function () {
