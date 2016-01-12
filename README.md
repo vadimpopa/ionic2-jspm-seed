@@ -9,9 +9,12 @@ To Do:
   - improve gulp tasks
   - finish cordova build & simulate tasks.
 
-To install the platform:
+To run de DEV:
   - npm install
   - jspm install
+  - gulp build.dev
+  - gulp
+  - check the browser
 
 To watch from local: gulp
 To watch from distro: gulp connect.build
