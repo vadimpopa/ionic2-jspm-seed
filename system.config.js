@@ -19,7 +19,7 @@ System.config({
       "main": "app",
       "defaultExtension": "js",
       "map": {
-        "ionic": "npm:ionic-framework@2.0.0-alpha.44/ionic.js"
+        "ionic": "npm:ionic-framework@2.0.0-alpha.44/ionic"
       },
       "modules": {
         "*.js": {
