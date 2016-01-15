@@ -1,6 +1,6 @@
 <ion-navbar *navbar>
   <button menuToggle>
-    <icon menu></icon>
+    <ion-icon menu></ion-icon>
   </button>
   <ion-title>My First List</ion-title>
 </ion-navbar>
@@ -8,7 +8,7 @@
 <ion-content>
   <ion-list>
     <button ion-item *ngFor="#item of items" (click)="itemTapped($event, item)">
-      <icon name="{{item.icon}}" item-left></icon>
+      <ion-icon name="{{item.icon}}" item-left></ion-icon>
       {{item.title}}
       <div class="item-note" item-right>
         {{item.note}}
