@@ -74,7 +74,7 @@ gulp.task('build.js', function () {
             selfExecutingBundle: true,
             minify: false
         }))
-        .pipe(inlineNg2Template({base: global.paths.src}))
+        .pipe(inlineNg2Template({base: global.paths.src, css: false}))
         .pipe(rename({
             basename: 'app.min',
             extname: '.js'
