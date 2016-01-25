@@ -1,4 +1,4 @@
-import {Page, NavController} from 'ionic';
+import {Page, NavController} from 'ionic/ionic';
 
 @Page({
 	templateUrl: './app/pages/hello-ionic/hello-ionic.html'

@@ -43,22 +43,22 @@
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.1.1",
     "gulp-scss-lint": "^0.3.9",
-    "gulp-shell": "^0.5.1",
+    "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-tslint": "^4.3.0",
+    "gulp-tslint": "^4.3.1",
     "gulp-tslint-stylish": "^1.1.1",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
     "imagemin-pngquant": "^4.2.0",
-    "jspm": "^0.16.23",
+    "jspm": "^0.16.25",
     "require-dir": "^0.3.0",
     "rsvp": "^3.1.0",
     "run-sequence": "^1.1.5",
-    "systemjs": "^0.19.16",
+    "systemjs": "^0.19.17",
     "through2": "^2.0.0",
-    "tslint": "^3.2.1",
+    "tslint": "^3.3.0",
     "typescript": "^1.7.5",
-    "yargs": "^3.31.0"
+    "yargs": "^3.32.0"
   },
   "dependencies": {
     "cordova": "^5.4.1"
@@ -67,7 +67,7 @@
     "configFile": "system.config.js",
     "dependencies": {
       "css": "github:systemjs/plugin-css@^0.1.20",
-      "ionic": "npm:ionic-framework@2.0.0-alpha.48",
+      "ionic": "npm:ionic-framework@2.0.0-alpha.52",
       "reflect-metadata": "npm:reflect-metadata@^0.1.3",
       "ts": "github:frankwallis/plugin-typescript@^2.4.6",
       "zone.js": "npm:zone.js@^0.5.10"

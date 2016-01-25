@@ -1,4 +1,4 @@
-import {IonicApp, Page, NavController, NavParams} from 'ionic';
+import {IonicApp, Page, NavController, NavParams} from 'ionic/ionic';
 
 @Page({
 	templateUrl: './app/pages/item-details/item-details.html'

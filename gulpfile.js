@@ -45,10 +45,10 @@ global.dependencies = {
 
 // Specify paths & globbing patterns for tasks.
 global.paths = {
-    'jsMain': './app/app.js',
+    'jsMain': './app/app.ts',
     'html': 'index.prod.html',
     'tpl': './app/**/*.html',
-    'js': './app/**/*.js',
+    'js': './app/**/*.ts',
     'sass': './app/app.ios.scss',
     'img': './app/img/*',
     'src': './',
