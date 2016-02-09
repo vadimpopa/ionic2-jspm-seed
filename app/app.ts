@@ -1,3 +1,4 @@
+import 'zone.js'
 import 'reflect-metadata';
 
 import {App, IonicApp, Platform} from 'ionic/ionic';
