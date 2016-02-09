@@ -42,6 +42,7 @@ System.config({
     "clean-css": "npm:clean-css@3.4.9",
     "css": "github:systemjs/plugin-css@0.1.20",
     "ionic": "npm:ionic-framework@2.0.0-alpha.56",
+    "ionicons": "npm:ionicons@3.0.0-alpha.3",
     "ts": "github:frankwallis/plugin-typescript@3.0.2",
     "typescript": "npm:typescript@1.8.0",
     "github:frankwallis/plugin-typescript@3.0.2": {
