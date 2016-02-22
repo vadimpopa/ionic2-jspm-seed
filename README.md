@@ -4,6 +4,7 @@ ionic2-jspm-seed + typescript starter
 Status:
   - ```gulp build.dev``` ok 
   - ```gulp build.dist``` ok 
+  - needs ionicons proper integration, it fails at build when importing them
 
 To Do:
   - improve gulp tasks
