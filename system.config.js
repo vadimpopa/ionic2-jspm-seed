@@ -19,9 +19,9 @@ System.config({
       "main": "app",
       "defaultExtension": "ts",
       "map": {
-        "ionic": "npm:ionic-framework@2.0.0-alpha.56",
-        "zone.js": "npm:zone.js@0.5.11/dist/zone.js",
-        "angular2": "npm:angular2@2.0.0-beta.3",
+        "ionic": "npm:ionic-framework@2.0.0-beta.1",
+        "zone.js": "npm:zone.js@0.5.15/dist/zone.js",
+        "angular2": "npm:angular2@2.0.0-beta.7",
         "reflect-metadata": "npm:reflect-metadata@0.1.2"
       },
       "modules": {
@@ -41,12 +41,12 @@ System.config({
   map: {
     "clean-css": "npm:clean-css@3.4.9",
     "css": "github:systemjs/plugin-css@0.1.20",
-    "ionic": "npm:ionic-framework@2.0.0-alpha.56",
+    "ionic": "npm:ionic-framework@2.0.0-beta.1",
     "ionicons": "npm:ionicons@3.0.0-alpha.3",
-    "ts": "github:frankwallis/plugin-typescript@3.0.2",
+    "ts": "github:frankwallis/plugin-typescript@4.0.0",
     "typescript": "npm:typescript@1.8.0",
-    "github:frankwallis/plugin-typescript@3.0.2": {
-      "typescript": "npm:typescript@1.9.0-dev.20160209"
+    "github:frankwallis/plugin-typescript@4.0.0": {
+      "typescript": "npm:typescript@1.9.0-dev.20160221"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -107,19 +107,23 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:angular2@2.0.0-beta.3": {
+    "npm:angular2@2.0.0-beta.7": {
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
-      "es6-promise": "npm:es6-promise@3.0.2",
+      "es6-promise": "npm:es6-promise@3.1.2",
       "es6-shim": "npm:es6-shim@0.33.13",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "reflect-metadata": "npm:reflect-metadata@0.1.2",
-      "rxjs": "npm:rxjs@5.0.0-beta.0",
-      "zone.js": "npm:zone.js@0.5.11"
+      "rxjs": "npm:rxjs@5.0.0-beta.2",
+      "zone.js": "npm:zone.js@0.5.15"
     },
-    "npm:asn1.js@4.4.0": {
+    "npm:ansi-styles@2.2.0": {
+      "color-convert": "npm:color-convert@1.0.0"
+    },
+    "npm:asn1.js@4.5.0": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "bn.js": "npm:bn.js@4.10.3",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
       "inherits": "npm:inherits@2.0.1",
       "minimalistic-assert": "npm:minimalistic-assert@1.0.0",
       "vm": "github:jspm/nodelibs-vm@0.1.0"
@@ -187,11 +191,11 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:chalk@1.1.1": {
-      "ansi-styles": "npm:ansi-styles@2.1.0",
-      "escape-string-regexp": "npm:escape-string-regexp@1.0.4",
+      "ansi-styles": "npm:ansi-styles@2.2.0",
+      "escape-string-regexp": "npm:escape-string-regexp@1.0.5",
       "has-ansi": "npm:has-ansi@2.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
-      "strip-ansi": "npm:strip-ansi@3.0.0",
+      "strip-ansi": "npm:strip-ansi@3.0.1",
       "supports-color": "npm:supports-color@2.0.0"
     },
     "npm:cipher-base@1.0.2": {
@@ -295,7 +299,7 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:es6-promise@3.0.2": {
+    "npm:es6-promise@3.1.2": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:es6-shim@0.33.13": {
@@ -340,12 +344,12 @@ System.config({
       "readline2": "npm:readline2@1.0.1",
       "run-async": "npm:run-async@0.1.0",
       "rx-lite": "npm:rx-lite@3.1.2",
-      "strip-ansi": "npm:strip-ansi@3.0.0",
+      "strip-ansi": "npm:strip-ansi@3.0.1",
       "through": "npm:through@2.3.8",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:ionic-framework@2.0.0-alpha.56": {
-      "angular2": "npm:angular2@2.0.0-beta.3",
+    "npm:ionic-framework@2.0.0-beta.1": {
+      "angular2": "npm:angular2@2.0.0-beta.7",
       "colors": "npm:colors@1.1.2",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "inquirer": "npm:inquirer@0.11.0",
@@ -381,7 +385,7 @@ System.config({
       "os": "github:jspm/nodelibs-os@0.1.0"
     },
     "npm:parse-asn1@5.0.0": {
-      "asn1.js": "npm:asn1.js@4.4.0",
+      "asn1.js": "npm:asn1.js@4.5.0",
       "browserify-aes": "npm:browserify-aes@1.0.6",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hash": "npm:create-hash@1.1.2",
@@ -461,7 +465,7 @@ System.config({
     "npm:rx-lite@3.1.2": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:rxjs@5.0.0-beta.0": {
+    "npm:rxjs@5.0.0-beta.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -483,7 +487,7 @@ System.config({
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
-    "npm:strip-ansi@3.0.0": {
+    "npm:strip-ansi@3.0.1": {
       "ansi-regex": "npm:ansi-regex@2.0.0"
     },
     "npm:supports-color@2.0.0": {
@@ -506,8 +510,8 @@ System.config({
     "npm:vm-browserify@0.0.4": {
       "indexof": "npm:indexof@0.0.1"
     },
-    "npm:zone.js@0.5.11": {
-      "es6-promise": "npm:es6-promise@3.0.2",
+    "npm:zone.js@0.5.15": {
+      "es6-promise": "npm:es6-promise@3.1.2",
       "process": "github:jspm/nodelibs-process@0.1.2"
     }
   }
