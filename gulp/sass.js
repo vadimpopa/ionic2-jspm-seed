@@ -9,7 +9,8 @@ var sassResolver = require('./sassresolver.js');
 
 var sassOptions = {
   errLogToConsole: true,
-  outputStyle: 'expanded'
+  outputStyle: 'expanded',
+  includePaths: ['jspm_packages/npm/ionicons@3.0.0-alpha.3/dist/scss']
 };
 
 // Compile SASS with sourcemaps + livereload.
