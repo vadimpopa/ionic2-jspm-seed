@@ -1,6 +1,6 @@
 {
   "name": "jspm-ionic2-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSPM Ionic2 with Typescript starter",
   "main": "gulpfile.js",
   "scripts": {
